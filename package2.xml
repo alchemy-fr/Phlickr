@@ -1,0 +1,636 @@
+<?xml version="1.0"?>
+<package packagerversion="1.4.0a12" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+http://pear.php.net/dtd/tasks-1.0.xsd
+http://pear.php.net/dtd/package-2.0
+http://pear.php.net/dtd/package-2.0.xsd">
+ <name>Phlickr</name>
+ <channel>pear.php.net</channel>
+ <summary>Access the Flickr API (PHP 5)</summary>
+ <description>This package provides PHP5 access to the Flickr API.
+ </description>
+ <lead>
+  <name>Andrew Morton</name>
+  <user>drewish</user>
+  <email>drewish@katherinehouse.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2006-11-26</date>
+ <time>13:00:00</time>
+ <version>
+  <release>0.2.7</release>
+  <api>0.2.7</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.gnu.org/copyleft/lesser.html">LGPL</license>
+ <notes>Fixed stuff
+-----------
+* Fixed a bug in Tools/GetToken.php saving the auth info.
+* Removed some byref returning wankyness from Phlickr_Api.
+* Phlickr_Uploader::uploader() now uses a signed URL.
+* Phlickr_Photo::saveAs() now uses CURL for the downloads which is much faster than PHP's fopen.
+* Removed trailing ?>'s from tests.
+ </notes>
+ <contents>
+  <dir name="/" baseinstalldir="Phlickr" >
+   <dir name="Framework">
+    <file name="IList.php" role="php" />
+    <file name="IPhotoList.php" role="php" />
+    <file name="IPhotoSortStrategy.php" role="php" />
+    <file name="IUploadBatch.php" role="php" />
+    <file name="IUploadListener.php" role="php" />
+    <file name="ListBase.php" role="php" />
+    <file name="ObjectBase.php" role="php" />
+   </dir> <!-- /Framework -->
+   <dir name="Import">
+    <file name="Gallery.php" role="php" />
+    <file name="Makethumbs.php" role="php" />
+   </dir> <!-- /Import -->
+   <dir name="PhotoSortStrategy">
+    <file name="ByColor.php" role="php" />
+    <file name="ById.php" role="php" />
+    <file name="ByTakenDate.php" role="php" />
+    <file name="ByTitle.php" role="php" />
+   </dir> <!-- /PhotoSortStrategy -->
+   <dir name="Tests">
+    <file name="AllTests.php" role="test" />
+    <file name="constants.inc" role="test" />
+    <file name="small_sample.gif" role="test" />
+    <file name="small_sample.JPG" role="test" />
+    <file name="small_sample.png" role="test" />
+   </dir> <!-- /Tests -->
+   <dir name="Tests/Mocks">
+    <file name="PhotoListRequest.php" role="test" />
+    <file name="Request.php" role="test" />
+   </dir> <!-- /Tests/Mocks -->
+   <dir name="Tests/Offline">
+    <file name="AllTests.php" role="test" />
+    <file name="Api.php" role="test" />
+    <file name="AuthedGroup.php" role="test" />
+    <file name="AuthedPhoto.php" role="test" />
+    <file name="AuthedPhotoset.php" role="test" />
+    <file name="AuthedPhotosetList.php" role="test" />
+    <file name="AuthedUser.php" role="test" />
+    <file name="Cache.php" role="test" />
+    <file name="Group.php" role="test" />
+    <file name="GroupList.php" role="test" />
+    <file name="Photo.php" role="test" />
+    <file name="PhotoList.php" role="test" />
+    <file name="PhotoListIterator.php" role="test" />
+    <file name="Photoset.php" role="test" />
+    <file name="PhotosetList.php" role="test" />
+    <file name="PhotosetPhotoList.php" role="test" />
+    <file name="PhotoSorter.php" role="test" />
+    <file name="Request.php" role="test" />
+    <file name="Response.php" role="test" />
+    <file name="Uploader.php" role="test" />
+    <file name="User.php" role="test" />
+    <file name="UserList.php" role="test" />
+   </dir> <!-- /Tests/Offline -->
+   <dir name="Tests/Offline/Import">
+    <file name="AllTests.php" role="test" />
+    <file name="Gallery.php" role="test" />
+    <file name="Makethumbs.php" role="test" />
+   </dir> <!-- /Tests/Offline/Import -->
+   <dir name="Tests/Offline/PhotoSortStrategy">
+    <file name="AllTests.php" role="test" />
+    <file name="ByColor.php" role="test" />
+    <file name="ById.php" role="test" />
+    <file name="ByTakenDate.php" role="test" />
+    <file name="ByTitle.php" role="test" />
+   </dir> <!-- /Tests/Offline/PhotoSortStrategy -->
+   <dir name="Tests/Offline/TextUi">
+    <file name="AllTests.php" role="test" />
+    <file name="UploadBatchViewer.php" role="test" />
+    <file name="UploadListener.php" role="test" />
+   </dir> <!-- /Tests/Offline/TextUi -->
+   <dir name="Tests/Online">
+    <file name="AllTests.php" role="test" />
+    <file name="Api.php" role="test" />
+    <file name="AuthedGroup.php" role="test" />
+    <file name="AuthedPhoto.php" role="test" />
+    <file name="AuthedPhotoset.php" role="test" />
+    <file name="AuthedPhotosetList.php" role="test" />
+    <file name="AuthedUser.php" role="test" />
+    <file name="Group.php" role="test" />
+    <file name="Photo.php" role="test" />
+    <file name="PhotoList.php" role="test" />
+    <file name="Photoset.php" role="test" />
+    <file name="PhotosetList.php" role="test" />
+    <file name="Request.php" role="test" />
+    <file name="Uploader.php" role="test" />
+    <file name="User.php" role="test" />
+   </dir> <!-- /Tests/Online -->
+   <dir name="TextUi">
+    <file name="UploadBatchViewer.php" role="php" />
+    <file name="UploadListener.php" role="php" />
+   </dir> <!-- /TextUi -->
+   <file name="Api.php" role="php" />
+   <file name="AuthedGroup.php" role="php" />
+   <file name="AuthedPhoto.php" role="php" />
+   <file name="AuthedPhotoset.php" role="php" />
+   <file name="AuthedPhotosetList.php" role="php" />
+   <file name="AuthedUser.php" role="php" />
+   <file name="Cache.php" role="php" />
+   <file name="Exception.php" role="php" />
+   <file name="Group.php" role="php" />
+   <file name="GroupList.php" role="php" />
+   <file name="Photo.php" role="php" />
+   <file name="PhotoList.php" role="php" />
+   <file name="PhotoListIterator.php" role="php" />
+   <file name="Photoset.php" role="php" />
+   <file name="PhotosetList.php" role="php" />
+   <file name="PhotosetPhotoList.php" role="php" />
+   <file name="PhotoSorter.php" role="php" />
+   <file name="Request.php" role="php" />
+   <file name="Response.php" role="php" />
+   <file name="Uploader.php" role="php" />
+   <file name="User.php" role="php" />
+   <file name="UserList.php" role="php" />
+  </dir> <!-- / -->
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0a1</min>
+   </pearinstaller>
+   <extension>
+    <name>curl</name>
+   </extension>
+   <extension>
+    <name>SimpleXML</name>
+   </extension>
+  </required>
+  <optional>
+   <package>
+    <name>PHPUnit2</name>
+    <channel>pear.php.net</channel>
+    <min>2.2.0</min>
+   </package>
+   <extension>
+    <name>gd</name>
+   </extension>
+  </optional>
+ </dependencies>
+ <phprelease />
+
+ <changelog>
+  <release>
+   <date>2006-02-05</date>
+   <time>16:30:00</time>
+   <version>
+    <release>0.2.6</release>
+    <api>0.2.6</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <license uri="http://www.gnu.org/copyleft/lesser.html">LGPL</license>
+   <notes>New stuff (and backwards compatibility breaks)
+---------
+* BC: Phlickr_PhotoList now returns Phlickr_AuthedPhoto objects if the current
+  user is the photo's owner.
+* BC: Phlickr_AuthedPhotosetList::create() now returns a photoset id rather than
+  an object. Flickr's been getting slower so it takes a few seconds for the set
+  to be created. Now the caller can add the appropriate calls to sleep() before
+  creating the Phlickr_AuthedPhotoset object.
+
+* Added Phlickr_Group::buildDiscussFeedUrl() and buildPhotoFeedUrl() to provide
+  URLs to a groups photos and discussions.
+* Added Phlickr_User::buildCommentsByFeedUrl() and buildCommentsOnFeedUrl() to
+  provide URLs to a comments made by a users and on a user's photos.
+* Added Phlickr_AuthedPhoto::delete() to delete photos.
+* Added Phlickr_User::getTags() and getPopularTags() to grab a user's tags.
+* Fixed a big bug in the Phlickr_PhotoSorter that caused photos to be dropped
+  if more than one had the same comparison key.
+* Several improvements in Phlickr_PhotoSortStrategy_ByColor.
+
+Fixed stuff
+-----------
+* Fixed: Photosets now use string ids.
+* Fixed: Lots of documentation was specifying integer ids, instead of strings.
+   </notes>
+  </release>
+
+  <release>
+   <version>
+    <release>0.2.5</release>
+    <api>0.2.5</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2006-01-03</date>
+   <license uri="http://www.gnu.org/copyleft/lesser.html">LGPL</license>
+    <notes>New stuff (and backwards compatibility breaks)
+---------
+* BC BREAK: Phlickr_Uploader::upload() returns a photo id now instead of a photo
+  object. The change was made because Flickr's servers have been getting slower
+  on uploads causing exceptions when the new photo couldn't be found.
+* BC BREAK: Ids are now strings, not integers. Flickr has stated that the format
+  will be changing at some point in the future.
+* Added Phlickr_PhotoSortStrategy_ByTakenDate to sort by a photo's taken date.
+* Phlickr_Uploader::upload() now accepts tags as a string or as an array.
+* Added Phlickr_Uploader::uploadBatch() to allow multiple photos to be uploaded
+  and then added to photoset. I think it's pretty neat.
+* Added Phlickr_Framework_IUploadBatch and Phlickr_Framework_IUploadListener.
+  They're used by Phlickr_Uploader::uploadBatch().
+* Added Phlickr_Import_Makethumbs, it implements Phlickr_Framework_IUploadBatch,
+  to import galleries created by Rob Molenda's makethumb.sh script.
+* Added Phlickr_Import_Gallery, it implements Phlickr_Framework_IUploadBatch, to
+  import Gallery (http://gallery.sf.net) albums.
+* Added Phlickr_TextUi_UploadBatchViewer to display the contents of
+  Phlickr_Framework_IUploadBatch objects.
+
+Fixed stuff
+-----------
+* Updated Phlickr_Photo::buildImgUrl() to use Flickr's new URL styles.
+* Phlickr_Request::submitHttpPost() now takes an argument to specify the
+  timeout. This change was made so uploads of long files can go for a long time
+  and other, failed, requests can fail sooner.
+* Phlickr_Uploader::upload() works better. It also waits longer for uploads now.
+* Finally got the package working with both versions of the PEAR package.xml
+  file.
+* Changed Phlickr_AuthedPhoto::setTaken() to make the $granularity parameter
+  optional.
+   </notes>
+  </release>
+
+  <release>
+   <version>
+    <release>0.2.4</release>
+    <api>0.2.4</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2005-08-26</date>
+   <license uri="http://www.gnu.org/copyleft/lesser.html">LGPL</license>
+   <notes>Broken backwards compatibility
+-----------------------------
+* Reworked most of the photo sorting. Phlickr_PhotoSorter uses a
+  Phlickr_Framework_IPhotoSortStrategy instead of the
+  Phlickr_Framework_IPhotoComparator. The implementations have been
+  moved from Phlickr/PhotoComparators to Phlickr/PhotoSortStrategy
+  which is longer but more descriptive.
+
+New stuff
+---------
+* Added Phlickr_Api::saveAs() and Phlickr_Api::createFrom() methods
+  to allow the Api settings to be saved and loaded.
+* Added Phlickr_Api::getCacheFilename() and setCacheFilename() to
+  simplify the loading and saving of the cached data to a file. When
+  Phlickr_Api::__destruct() is called the cache is saved to the
+  file.
+* Added getXml() to most wrapper objects (Phlickr_Photo,
+  Phlickr_AuthedUser, etc).
+* Added getRawTags() to Phlickr_Photo.
+
+Misc Stuff
+----------
+* Added getRequestMethodName() and getRequestMethodParams() to
+  Phlickr_Photoset and Phlickr_PhotosetList.
+   </notes>
+  </release>
+
+  <release>
+   <version>
+    <release>0.2.3</release>
+    <api>0.2.3</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2005-07-18</date>
+   <license uri="http://www.gnu.org/copyleft/lesser.html">LGPL</license>
+   <notes>New Authentication (Big break in backwards compatibility)
+* Made a bunch of big changes to Phlickr_Api and Phlickr_Request
+  to implement the new Flickr authentication mechanism. It&apos;s a
+  pain in the ass to use but we&apos;ll all suffer together.
+* Renamed Phlickr_Api::isValidAuth() to isAuthValid().
+* Phlickr_Api::__construct() takes very different parameters
+New stuff:
+Caching
+* Changed Phlickr_Cache to add support for expiring items from
+  the cache.
+* Added $allowCached parameter to Phlickr_Api::executeMethod().
+Photo
+* Added getSizes() to Phlickr_Photo.
+* Changed Phlickr_Photo::buildImgUrl() to use getSizes() to find
+  the proper file type when building URLs to the original image.
+PhotoListIterator
+* Phlickr_PhotoListIterator now implements
+  Phlickr_Framework_IPhotoList effectively &quot;flattening&quot; a paged
+  photo list.
+* Added Phlickr_PhotoListIterator::getCount(), getIds(), and
+  getPhotos() which pull the number of photos on all the pages,
+  the photo ids from all the pages, and the photos from all the
+  pages respectively.
+* Renamed Phlickr_PhotoList::getPhotosForPage() to
+  getPhotosFromPage(). The function wasn&apos;t really a &quot;public&quot;
+  function so it shouldn&apos;t cause too many problems.
+* Added Phlickr_PhotoList::getIdsFromPage().
+* Removed the static from Phlickr_PhotoList::requestXml() and
+  reworked some of the parameters.
+Photo Sorting
+* Created Phlickr_Framework_IPhotoComparator interface.
+* Created Phlickr_PhotoSorter to sort photos using a
+  Phlickr_Framework_IPhotoComparator.
+* Created Phlickr_Comparators_PhotoById to sort photos by their
+  id (which should be the same as upload order).
+* Created Phlickr_Comparators_PhotoByTitle to sort photos by
+  their title.
+* Created Phlickr_Comparators_PhotoByColor to sort photos by
+  their color. It works well enough to be interesting.
+Misc
+* Added getRequestMethodName() and getRequestMethodParams() to
+  Phlickr_Photoset and Phlickr_PhotosetList.
+As always, I&apos;ve continued to make improvements in the
+documentation.
+   </notes>
+  </release>
+
+  <release>
+   <version>
+    <release>0.2.2</release>
+    <api>0.2.2</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2005-07-03</date>
+   <license uri="http://www.gnu.org/copyleft/lesser.html">LGPL</license>
+   <notes>New stuff:
+* Added Phlickr_AuthedPhoto-&gt;setTaken() and setPosted().
+* Added Phlickr_Photo-&gt;getTakenDate() and getPostedDate() to
+  return a formated date string.
+* Making some changed to the way Phlickr_Uploader works. I&apos;m
+  trying to remove the number of parameters to Upload(). Added
+  setPerms() to assign and isForPublic(), isForFriends(), and
+  isForFamily() to view the permissions assigned to each photo
+  uploaded. Added setTags() and getTags() to specify tags that
+  should be added to each and every photo. Any tags passed into
+  upload() will be appended to the end of getTags()&apos;s list.
+* Added Phlickr_Photo::isForPublic(), isForFriends(), and
+  isForFamily() to allow you to check the visibility of photos.
+* Started adding @since tags to the PHPDoc comments.
+* Added an optional dependency for the GD library. I&apos;m planning
+  some stuff that sorts by color.
+Bug fixes:
+* Phlickr_AuthedPhotosetList-&gt;create() was returning a
+  Phlickr_Photoset instead of an Phlickr_AuthedPhotoset.
+As always, I&apos;ve continued to make improvements in the
+documentation.
+   </notes>
+  </release>
+
+  <release>
+   <version>
+    <release>0.2.1</release>
+    <api>0.2.1</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2005-06-19</date>
+   <license uri="http://www.gnu.org/copyleft/lesser.html">LGPL</license>
+   <notes>Broke some backwards compatibility:
+* Forked the modifiers in Phlickr_Photo to
+  Phlickr_AuthedPhoto.
+* Renamed Phlickr_Photoset and Phlickr_AuthedPhotoset&apos;s
+  getOwnerId() method to getUserId().
+* Renamed Phlickr_Photo and Phlickr_AuthedPhoto&apos;s getOwnerId()
+  to method to getUserId().
+New stuff:
+* Added getPostedTimestamp(), getTakenGranularity() and
+    getTakenTimestamp() to Phlickr_Photo to allow access to a
+    photo&apos;s dates.
+* Added getRealname() to Phlickr_User.
+* Created Phlickr_UserList class.
+* Created Phlickr_AuthedGroup class and added add() and remove()
+    methods.
+* Added getContactUserList() to Phlickr_User and
+  Phlickr_AuthedUser.
+* Modified Phlickr_User-&gt;getGroupList() to return
+  private groups.
+* Added the saveAs() and loadFrom() methods to the Phlickr_Cache
+  class to simplify the process of saving cached data between
+  sessions.
+Internal changes:
+* Added code to Phlickr_GroupList to work Flickr&apos;s inconsistent
+  naming of id fields in the group lists.
+* Refactored some of the XML element name passing internals.
+   </notes>
+  </release>
+
+  <release>
+   <version>
+    <release>0.2.0</release>
+    <api>0.2.0</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2005-05-28</date>
+   <license uri="http://www.gnu.org/copyleft/lesser.html">LGPL</license>
+   <notes>* Forked the modifiers in Phlickr_Photoset to
+  Phlickr_AuthedPhotoset. This breaks backwards compatibility.
+* Added saveAs() to Phlickr_Photo.
+* Continued work on improving documentation.
+* Added a bunch of files that had been missing from the package.
+   </notes>
+  </release>
+
+  <release>
+   <version>
+    <release>0.1.9</release>
+    <api>0.1.9</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2005-05-25</date>
+   <license uri="http://www.gnu.org/copyleft/lesser.html">LGPL</license>
+   <notes>* Forked the modifiers in Phlickr_PhotosetList to
+  Phlickr_AuthedPhotosetList. This breaks backwards
+  compatibility.
+* Added getPhotoCount() to Phlickr_Photoset.
+* Continued work on improving documentation.
+* Modified Phlickr_Request in response to Flickr&apos;s new
+  requirement that all setter requests be POSTed.
+   </notes>
+  </release>
+
+  <release>
+   <version>
+    <release>0.1.8</release>
+    <api>0.1.8</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2005-05-16</date>
+   <license uri="http://www.gnu.org/copyleft/lesser.html">LGPL</license>
+   <notes>* Worked on fixing a page switching bug in Phlickr_PhotoList.
+* Fixed a bug in Phlickr_Photo::buildImgUrl(). I didn&apos;t
+  understand that the &apos;-&apos; in the Flickr API indicated a null.
+* Added Phlickr_Photo::SIZE_* constants to specify the image
+  size for Phlickr_Photo::buildImgUrl().
+* Refactored Phlickr_PhotoList to remove the inheritance of
+  Phlickr_Framework_ListBase and open it up for an iterator.
+* Extracted an interface (Phlickr_Framework_IList) from
+  Phlickr_Framework_ListBase. All lists now implement it.
+* Created the Phlickr_PhotoListIterator class. It makes it much
+  easier to deal with the photo lists.
+* Added Phlickr_Group::findbyUrl() to instantiate a group based
+  on its URL.
+* Continued work on improving documentation.
+   </notes>
+  </release>
+
+  <release>
+   <version>
+    <release>0.1.7</release>
+    <api>0.1.7</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2005-05-07</date>
+   <license uri="http://www.gnu.org/copyleft/lesser.html">LGPL</license>
+   <notes>* Added addFavorite() and removeFavorite() to Phlickr_AuthedUser
+  class.
+* Worked on improving caching in Phlickr_PhotoList.
+* Modified Phlickr_Photoset-&gt;editPhotos() to return a
+  Phlickr_PhotosetPhotoList instead of void.
+* Added findByUsername(), findByEmail(), and findByUrl() methods
+  to the Phlickr_User class.
+* Added Phlickr_PhotoList-&gt;getRandomPhoto().
+* Worked on improving the PHPDoc comments. Starting to add
+  examples.
+   </notes>
+  </release>
+
+  <release>
+   <version>
+    <release>0.1.6</release>
+    <api>0.1.6</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2005-04-25</date>
+   <license uri="http://www.gnu.org/copyleft/lesser.html">LGPL</license>
+   <notes>* Added Phlickr_AuthedUser class.
+* Added request caching with Phlickr_Cache.
+* Modified most classes to make use of the caching.
+* Added Phlickr_PhotosetPhotoList-&gt;getRandomPhoto().
+* Modified unit tests to use cached results instead of the
+  Phlickr_Tests_Mocks_Api class.
+   </notes>
+  </release>
+
+  <release>
+   <version>
+    <release>0.1.5</release>
+    <api>0.1.5</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2005-03-27</date>
+   <license uri="http://www.gnu.org/copyleft/lesser.html">LGPL</license>
+   <notes>* Added Phlickr_Group-&gt;getPhotoList().
+* Added Phlickr_PhotoList-&gt;getPageCount().
+* Fixed a bug in the Phlickr_Group that prevented it from
+  loading a group.
+   </notes>
+  </release>
+
+  <release>
+   <version>
+    <release>0.1.4</release>
+    <api>0.1.4</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2005-03-23</date>
+   <license uri="http://www.gnu.org/copyleft/lesser.html">LGPL</license>
+   <notes>* Added the Group and GroupList objects.
+* Refactored a bunch of stuff up into the ObjectBase and
+  ListBase classes.
+   </notes>
+  </release>
+
+  <release>
+   <version>
+    <release>0.1.3</release>
+    <api>0.1.3</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2005-03-19</date>
+   <license uri="http://www.gnu.org/copyleft/lesser.html">LGPL</license>
+   <notes>* Added User-&gt;getFavoritePhotoList() and User-&gt;getPhotoList().
+* PhotosetList now requires a User Id.
+   </notes>
+  </release>
+
+  <release>
+   <version>
+    <release>0.1.2</release>
+    <api>0.1.2</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2005-03-16</date>
+   <license uri="http://www.gnu.org/copyleft/lesser.html">LGPL</license>
+   <notes>* Created a Framework directory for abstract classes and
+  interfaces. Move files into it and updated names.
+* Added PHPUnit2 tests to the package.
+   </notes>
+  </release>
+
+  <release>
+   <version>
+    <release>0.1.0</release>
+    <api>0.1.0</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2005-03-09</date>
+   <license uri="http://www.gnu.org/copyleft/lesser.html">LGPL</license>
+   <notes>First public release.
+Features that are &quot;finished&quot;:
+* Synchronous photo uploads.
+* API Requests and Responses.
+* Objects to wrap users, photos, photosets and photo lists.
+   </notes>
+  </release>
+ </changelog>
+</package>
