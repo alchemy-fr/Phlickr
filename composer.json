@@ -1,4 +1,7 @@
 {
-  "name": "alchemy/phlickr",
-  "version": "master"
+  "name": "alchemy/Phlickr",
+  "version": "master",
+  "autoload": {
+    "psr-0": { Phlickr_": "./" }
+  }
 }
