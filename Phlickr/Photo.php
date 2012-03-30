@@ -9,15 +9,6 @@
  */
 
 /**
- * Phlickr_Api includes the core classes.
- */
-require_once 'Phlickr/Api.php';
-/**
- * This class extends Phlickr_ObjectBase.
- */
-require_once 'Phlickr/Framework/ObjectBase.php';
-
-/**
  * Phlickr_Photo allows the manipuation of a Flickr photo.
  *
  * @package Phlickr

@@ -9,18 +9,6 @@
  */
 
 /**
- * Phlickr_Api includes the core classes.
- */
-require_once 'Phlickr/Api.php';
-/**
- * This class extends Phlickr_User.
- */
-require_once 'Phlickr/User.php';
-/**
- * One or more methods returns Phlickr_AuthedPhotosetList objects.
- */
-require_once 'Phlickr/AuthedPhotosetList.php';
-/**
  * This class extends Phlickr_User to perform actions on a logged in user.
  *
  * Sample usage:

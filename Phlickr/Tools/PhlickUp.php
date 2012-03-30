@@ -20,11 +20,6 @@
  *          GNU Lesser General Public License, Version 2.1
  */
 
-require_once 'Phlickr/Api.php';
-require_once 'Phlickr/AuthedUser.php';
-require_once 'Phlickr/TextUi/UploadListener.php';
-require_once 'Phlickr/Uploader.php';
-
 class CommandlineBatchUploader
 implements Phlickr_Framework_IUploadBatch
 {

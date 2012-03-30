@@ -9,19 +9,6 @@
  */
 
 /**
- * Phlickr_Api includes the core classes.
- */
-require_once 'Phlickr/Api.php';
-/**
- * This class extends Phlickr_ListBase.
- */
-require_once 'Phlickr/Framework/ListBase.php';
-/**
- * One or more methods returns Phlickr_Photoset objects.
- */
-require_once 'Phlickr/Photoset.php';
-
-/**
  * Phlickr_PhotosetList is a read-only list of a users's photosets.
  *
  * This class allows the viewing user's photosets. If you need to add, remove,

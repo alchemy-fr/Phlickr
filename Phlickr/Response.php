@@ -9,11 +9,6 @@
  */
 
 /**
- * Phlickr_Api includes the core classes.
- */
-require_once 'Phlickr/Api.php';
-
-/**
  * Phlickr_Response handles the XML returned by a Phlickr_Request.
  *
  * Sample usage:

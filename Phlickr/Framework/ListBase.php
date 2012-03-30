@@ -9,11 +9,6 @@
  */
 
 /**
- * This class implements the IList interface.
- */
-require_once 'Phlickr/Framework/IList.php';
-
-/**
  * A base class for the Phlickr lists that wrap XML returned by API calls.
  *
  * This class provide default implementations for all its functions. You can

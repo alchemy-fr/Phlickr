@@ -9,19 +9,6 @@
  */
 
 /**
- * Phlickr_Api includes the core classes.
- */
-require_once 'Phlickr/Api.php';
-/**
- * This class extends Phlickr_ListBase.
- */
-require_once 'Phlickr/Framework/ListBase.php';
-/**
- * One or more methods returns Phlickr_User objects.
- */
-require_once 'Phlickr/User.php';
-
-/**
  * Phlickr_UserList simply holds a list of users.
  *
  * Flickr is rather inconsistent in the naming of elements in the XML they

@@ -9,10 +9,6 @@
  */
 
 /**
- * This class extends Phlickr_Photo.
- */
-require_once 'Phlickr/Photo.php';
-/**
  * This class extends Phlickr_Photo to allow modifications of a photo.
  *
  * @package Phlickr

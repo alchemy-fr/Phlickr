@@ -8,17 +8,6 @@
  * @package Phlickr
  */
 
-
-/**
- * Phlickr_Api includes the core classes.
- */
-require_once 'Phlickr/Api.php';
-/**
- * This class implements IPhotoSortStrategy.
- */
-require_once 'Phlickr/Framework/IPhotoSortStrategy.php';
-
-
 /**
  * An object sort Phlickr_Photo objects by thier id value, and hopefully their
  * upload order.

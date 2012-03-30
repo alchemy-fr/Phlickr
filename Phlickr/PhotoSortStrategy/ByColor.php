@@ -8,17 +8,6 @@
  * @package Phlickr
  */
 
-
-/**
- * Phlickr_Api includes the core classes.
- */
-require_once 'Phlickr/Api.php';
-/**
- * This class implements IPhotoSortStrategy.
- */
-require_once 'Phlickr/Framework/IPhotoSortStrategy.php';
-
-
 /**
  * An object to compare the color of two photos allowing them to be sorted.
  *

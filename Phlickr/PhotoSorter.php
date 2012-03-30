@@ -10,16 +10,6 @@
 
 
 /**
- * Phlickr_Api includes the core classes.
- */
-require_once 'Phlickr/Api.php';
-/**
- * This class accepts IPhotoSortStrategy objects as parameters.
- */
-require_once 'Phlickr/Framework/IPhotoSortStrategy.php';
-
-
-/**
  * An object to sorts Phlickr_Photos using a given
  * Phlickr_Framework_IPhotoComparator.
  *

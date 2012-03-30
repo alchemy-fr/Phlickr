@@ -15,11 +15,6 @@ define('API_CONFIG_FILE',  dirname(__FILE__) . './authinfo.cfg');
 // the cache file isn't required but if you share it's nice.
 define('CACHE_FILE', dirname(__FILE__) . '/cache.tmp');
 
-require_once 'Phlickr/Api.php';
-require_once 'Phlickr/PhotoList.php';
-require_once 'Phlickr/PhotoListIterator.php';
-
-
 print "This script lets you select photos by tag and then set the taken date\n";
 print "to a month-year date.\n\n";
 

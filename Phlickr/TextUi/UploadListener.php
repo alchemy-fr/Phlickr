@@ -9,15 +9,6 @@
  */
 
 /**
- * This class extends Phlickr_Framework_IUploadListener.
- */
-require_once 'Phlickr/Framework/IUploadListener.php';
-/**
- * This class uses Phlickr_Uploader to build URLs to edit uploaded photos.
- */
-require_once 'Phlickr/Uploader.php';
-
-/**
  * A command line listener to display upload status information.
  *
  * @author      Andrew Morton <drewish@katherinehouse.com>

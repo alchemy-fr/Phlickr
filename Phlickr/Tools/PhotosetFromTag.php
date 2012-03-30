@@ -18,13 +18,6 @@ define('API_CONFIG_FILE',  dirname(__FILE__) . './authinfo.cfg');
 // the cache file isn't required but if you share it's nice.
 define('CACHE_FILE', dirname(__FILE__) . '/cache.tmp');
 
-require_once 'Phlickr/Api.php';
-require_once 'Phlickr/AuthedPhotosetList.php';
-require_once 'Phlickr/PhotoList.php';
-require_once 'Phlickr/PhotoListIterator.php';
-require_once 'Phlickr/PhotoSorter.php';
-require_once 'Phlickr/PhotoSortStrategy/ById.php';
-
 // set up the api connection
 $api = Phlickr_Api::createFrom(API_CONFIG_FILE);
 if (! $api->isAuthValid()) {

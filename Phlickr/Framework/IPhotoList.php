@@ -9,15 +9,6 @@
  */
 
 /**
- * This class implements IList.
- */
-require_once 'Phlickr/Framework/IList.php';
-/**
- * One or more methods returns Phlickr_Photo and Phlickr_AuthedPhoto objects.
- */
-require_once 'Phlickr/AuthedPhoto.php';
-
-/**
  * Specifies the basic retreival functions that a PhotoList must support.
  *
  * @author      Andrew Morton <drewish@katherinehouse.com>

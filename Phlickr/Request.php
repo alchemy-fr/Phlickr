@@ -9,11 +9,6 @@
  */
 
 /**
- * Phlickr_Api includes the core classes.
- */
-require_once 'Phlickr/Api.php';
-
-/**
  * The Phlickr_Request executes a Flickr API method and returns a
  * Phlickr_Response object with the results.
  *

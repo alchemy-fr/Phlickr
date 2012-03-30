@@ -8,23 +8,6 @@
  */
 
 /**
- * Include Phlickr_Cache, a core class.
- */
-require_once 'Phlickr/Cache.php';
-/**
- * Include the Phlickr exceptions, core classes.
- */
-require_once 'Phlickr/Exception.php';
-/**
- * Include Phlickr_Request, a core class.
- */
-require_once 'Phlickr/Request.php';
-/**
- * Include Phlickr_CResponse, a core class.
- */
-require_once 'Phlickr/Response.php';
-
-/**
  * Phlickr_Api acts as a connection to the Flickr API and provides several
  * shortcut methods for interacting with it.
  *

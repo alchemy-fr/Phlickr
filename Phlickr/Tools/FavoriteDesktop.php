@@ -65,9 +65,6 @@ define('CACHE_FILE', 'C:\WINDOWS\Temp\phlickr.cache');
 define('FLICKR_API_KEY', '0b3ee85b948bf9b3382bdc627bacf5bc');
 define('FLICKR_API_SECRET', 'b00205f7d632d0ea');
 
-require_once 'Phlickr/Api.php';
-require_once 'Phlickr/User.php';
-
 try {
     $imgTempFile = tempnam('/tmp', 'jpg');
 
@@ -130,7 +127,7 @@ function getRandomFavoritePhoto($userEmail) {
  */
 function convertImageToBmp($inputFilePath, $bmpFilePath, $destopSize) {
     assert(file_exists($inputFilePath));
-    $cmd = sprintf('convert –type TrueColor -density 97x97 -resize %s "%s" bmp:"%s"',
+    $cmd = sprintf('convert ï¿½type TrueColor -density 97x97 -resize %s "%s" bmp:"%s"',
         $destopSize, $inputFilePath, $bmpFilePath);
     exec($cmd);
     assert(file_exists($bmpFilePath));

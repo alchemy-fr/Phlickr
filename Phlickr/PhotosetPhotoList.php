@@ -9,19 +9,6 @@
  */
 
 /**
- * Phlickr_Api includes the core classes.
- */
-require_once 'Phlickr/Api.php';
-/**
- * This class extends Phlickr_ListBase.
- */
-require_once 'Phlickr/Framework/ListBase.php';
-/**
- * This class implements IPhotoList.
- */
-require_once 'Phlickr/Framework/IPhotoList.php';
-
-/**
  * Phlickr_PhotosetPhotoList represents all the photos in a photoset.
  *
  * Unlike Phlickr_PhotoList, the photoset list is not segmented into pages.

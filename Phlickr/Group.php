@@ -9,19 +9,6 @@
  */
 
 /**
- * Phlickr_Api includes the core classes.
- */
-require_once 'Phlickr/Api.php';
-/**
- * This class extends Phlickr_ObjectBase.
- */
-require_once 'Phlickr/Framework/ObjectBase.php';
-/**
- * One or more methods returns Phlickr_PhotosetList objects.
- */
-require_once 'Phlickr/PhotoList.php';
-
-/**
  * Phlickr_Group access to the photos in a group.
  *
  * Sample usage:

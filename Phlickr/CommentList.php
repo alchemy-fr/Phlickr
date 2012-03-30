@@ -9,15 +9,6 @@
  */
 
 /**
- * Phlickr_Api includes the core classes.
- */
-require_once 'Phlickr/Api.php';
-/**
- * This class implements ICommentList.
- */
-require_once 'Phlickr/Framework/ICommentList.php';
-
-/**
  * Phlickr_PhotoList represents paged list of photos.
  *
  * <b>WATCH OUT</b>: there's still some problems with the caching in the class.
