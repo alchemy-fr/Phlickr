@@ -1,7 +1,9 @@
 {
   "name": "alchemy/Phlickr",
   "version": "master",
-  "autoload": {
-    "classmap": ["./"]
-  }
+    "autoload": {
+        "psr-0" : {
+            "Phlickr_" : "./"
+        }
+    }
 }
