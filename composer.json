@@ -1,5 +1,5 @@
 {
-  "name": "alchemy/Phlickr",
+  "name": "alchemy/phlickr",
   "version": "master",
     "autoload": {
         "psr-0" : {
