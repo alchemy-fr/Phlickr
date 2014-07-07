@@ -1,12 +1,33 @@
 <?php
 
 /**
- * @version $Id$
+ * @version $Id: Uploader.php 529 2006-10-30 21:49:21Z drewish $
  * @author  Andrew Morton <drewish@katherinehouse.com>
  * @license http://opensource.org/licenses/lgpl-license.php
  *          GNU Lesser General Public License, Version 2.1
  * @package Phlickr
  */
+
+/**
+ * Phlickr_Api includes the core classes.
+ */
+require_once 'Phlickr/Api.php';
+/**
+ * One or more methods returns Phlickr_Photo objects.
+ */
+require_once 'Phlickr/AuthedPhoto.php';
+/**
+ * uploadBatch() uses this to create a photoset.
+ */
+require_once 'Phlickr/AuthedPhotosetList.php';
+/**
+ * uploadBatch() accepts Phlickr_Framework_IUploadBatch as a parameter.
+ */
+require_once 'Phlickr/Framework/IUploadBatch.php';
+/**
+ * uploadBatch() accepts Phlickr_Framework_IUploadListener as a parameter.
+ */
+require_once 'Phlickr/Framework/IUploadListener.php';
 
 /**
  * Uploads photos to Flickr.
@@ -206,14 +227,6 @@ class Phlickr_Uploader {
     }
 
     /**
-				 *
-				 *
-				 *\/!\\/!\\/!\\/!\/
-				 * PATCH ASYNCHRONOUS PARAMETER ADDED
-				 *\/!\\/!\\/!\\/!\/
-				 *
-				 *
-				 *
      * Upload a photo to Flickr.
      *
      * If tags are specified, they'll be appended to those listed in getTags().
@@ -230,7 +243,7 @@ class Phlickr_Uploader {
      * @throws  Phlickr_ConnectionException
      * @see     isForPublic(), isForFriends(), isForFamily(), getTags()
      */
-    public function upload($fullFilePath, $title = '', $desc = '', $tags = '', $asynchronous = false) {
+    public function upload($fullFilePath, $title = '', $desc = '', $tags = '') {
         if (!file_exists($fullFilePath) || !is_readable($fullFilePath)) {
             throw new Phlickr_Exception(
                 "The file '{$fullFilePath}' does not exist or can not be accessed."
@@ -255,8 +268,7 @@ class Phlickr_Uploader {
                 'tags' => $tags,
                 'is_public' => (integer) $this->_forPublic,
                 'is_friend' => (integer) $this->_forFriends,
-                'is_family' => (integer) $this->_forFamily,
-																'async' => $asynchronous ? 1 : 0
+                'is_family' => (integer) $this->_forFamily
             )
         );
         // ... compute a signature ...
@@ -275,10 +287,7 @@ class Phlickr_Uploader {
         // use the reponse object to parse the results
         $resp = new Phlickr_Response($result, true);
         // return a photo id
-								if($asynchronous)
-										return (string) $resp->getXml	()->ticketid;
-								else
-										return  (string) $resp->getXml()->photoid;
+        return  (string) $resp->getXml()->photoid;
     }
 
     /**

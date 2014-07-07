@@ -1,12 +1,25 @@
 <?php
 
 /**
- * @version $Id$
+ * @version $Id: Photoset.php 506 2006-01-28 04:17:13Z drewish $
  * @author  Andrew Morton <drewish@katherinehouse.com>
  * @license http://opensource.org/licenses/lgpl-license.php
  *          GNU Lesser General Public License, Version 2.1
  * @package Phlickr
  */
+
+/**
+ * Phlickr_Api includes the core classes.
+ */
+require_once 'Phlickr/Api.php';
+/**
+ * This class extends Phlickr_ObjectBase.
+ */
+require_once 'Phlickr/Framework/ObjectBase.php';
+/**
+ * One or more methods returns Phlickr_PhotoList objects.
+ */
+require_once 'Phlickr/PhotosetPhotoList.php';
 
 /**
  * Phlickr_Photoset is a readonly representation of a Flickr photoset.

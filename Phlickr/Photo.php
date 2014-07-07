@@ -1,12 +1,21 @@
 <?php
 
 /**
- * @version $Id$
+ * @version $Id: Photo.php 543 2009-05-15 00:49:16Z grahamsc $
  * @author  Andrew Morton <drewish@katherinehouse.com>
  * @license http://opensource.org/licenses/lgpl-license.php
  *          GNU Lesser General Public License, Version 2.1
  * @package Phlickr
  */
+
+/**
+ * Phlickr_Api includes the core classes.
+ */
+require_once 'Phlickr/Api.php';
+/**
+ * This class extends Phlickr_ObjectBase.
+ */
+require_once 'Phlickr/Framework/ObjectBase.php';
 
 /**
  * Phlickr_Photo allows the manipuation of a Flickr photo.
@@ -252,6 +261,35 @@ class Phlickr_Photo extends Phlickr_Framework_ObjectBase {
      */
     public function getTakenTimestamp() {
         return strtotime($this->getTakenDate());
+    }
+    
+    /**
+     * Get a string of the day and time when the photo was updated.
+     *
+     * The date format string is 'Y-m-d H:i:s' (2004-11-19 12:51:19).
+     *
+     *
+     * @return  string
+     * @since   0.2.1
+     * @see     getTakenDate(), getTakenTimestamp(), getPostedDate(), getUpdatedTimestamp()
+     */
+    public function getUpdatedDate() {
+	return date('Y-m-d H:i:s', $this->getUpdatedTimestamp());
+    }
+    
+    /**
+     * Get the timestamp when this photo was last updated.
+     *
+     *
+     * @return  integer UNIX timestamp.
+     * @since   0.2.1
+     * @see     getUpdatedDate(), getPostedTimestamp(), getTakenTimestamp()
+     */
+    public function getUpdatedTimestamp() {
+	if (!isset($this->_cachedXml->dates['lastupdate'])) {
+	    $this->load();
+	}
+	return $this->_cachedXml->dates['lastupdate'];
     }
 
     /**
@@ -539,7 +577,7 @@ class Phlickr_Photo extends Phlickr_Framework_ObjectBase {
             return $sizes[self::SIZE_ORIGINAL]['source'];
         }
 
-        $url = sprintf("http://farm%d.static.flickr.com/%d/%d_%s%s.%s",
+        $url = sprintf("http://farm%d.static.flickr.com/%d/%s_%s%s.%s",
             $this->getFarm(), $this->getServer(), $this->getId(), $this->getSecret(), $sizeStr, $type);
         return $url;
     }
@@ -561,7 +599,7 @@ class Phlickr_Photo extends Phlickr_Framework_ObjectBase {
      * @since   0.2.0
      */
     public function saveAs($filename, $size = self::SIZE_240PX) {
-        $url = self::buildImgUrl($size);
+        $url = $this->buildImgUrl($size);
 
         $fh = fopen($filename, 'wb');
 

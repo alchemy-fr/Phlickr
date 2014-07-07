@@ -1,12 +1,17 @@
 <?php
 
 /**
- * @version $Id$
+ * @version $Id: Response.php 500 2006-01-03 23:29:08Z drewish $
  * @author  Andrew Morton <drewish@katherinehouse.com>
  * @license http://opensource.org/licenses/lgpl-license.php
  *          GNU Lesser General Public License, Version 2.1
  * @package Phlickr
  */
+
+/**
+ * Phlickr_Api includes the core classes.
+ */
+require_once 'Phlickr/Api.php';
 
 /**
  * Phlickr_Response handles the XML returned by a Phlickr_Request.
@@ -107,10 +112,8 @@ class Phlickr_Response {
 
         $this->stat = (string) $xml['stat'];
         if ($this->isOk()) {
-         
             $this->xml = $xml;
         } else {
-      
             $this->err_code = (integer) $xml->err['code'];
             $this->err_msg = (string) $xml->err['msg'];
 

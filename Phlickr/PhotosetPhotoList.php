@@ -1,12 +1,25 @@
 <?php
 
 /**
- * @version $Id$
+ * @version $Id: PhotosetPhotoList.php 506 2006-01-28 04:17:13Z drewish $
  * @author  Andrew Morton <drewish@katherinehouse.com>
  * @license http://opensource.org/licenses/lgpl-license.php
  *          GNU Lesser General Public License, Version 2.1
  * @package Phlickr
  */
+
+/**
+ * Phlickr_Api includes the core classes.
+ */
+require_once 'Phlickr/Api.php';
+/**
+ * This class extends Phlickr_ListBase.
+ */
+require_once 'Phlickr/Framework/ListBase.php';
+/**
+ * This class implements IPhotoList.
+ */
+require_once 'Phlickr/Framework/IPhotoList.php';
 
 /**
  * Phlickr_PhotosetPhotoList represents all the photos in a photoset.

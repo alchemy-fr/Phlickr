@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @version $Id$
+ * @version $Id: Makethumbs.php 499 2006-01-03 22:35:52Z drewish $
  * @author  Andrew Morton <drewish@katherinehouse.com>
  * @license http://opensource.org/licenses/lgpl-license.php
  *          GNU Lesser General Public License, Version 2.1

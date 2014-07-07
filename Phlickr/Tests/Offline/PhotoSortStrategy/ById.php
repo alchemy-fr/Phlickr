@@ -3,7 +3,7 @@
 /**
  * PhotoSortStrategy ById Offline Tests
  *
- * @version $Id$
+ * @version $Id: ById.php 537 2008-12-09 23:32:59Z edwardotis $
  * @copyright 2005
  */
 

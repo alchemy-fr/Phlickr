@@ -1,12 +1,17 @@
 <?php
 
 /**
- * @version $Id$
+ * @version $Id: AuthedPhotoset.php 500 2006-01-03 23:29:08Z drewish $
  * @author  Andrew Morton <drewish@katherinehouse.com>
  * @license http://opensource.org/licenses/lgpl-license.php
  *          GNU Lesser General Public License, Version 2.1
  * @package Phlickr
  */
+
+/**
+ * This class extends Phlickr_Photoset.
+ */
+require_once 'Phlickr/Photoset.php';
 
 /**
  * Phlickr_AuthedPhotoset represents a Flickr photoset.

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @version $Id$
+ * @version $Id: IList.php 506 2006-01-28 04:17:13Z drewish $
  * @author  Andrew Morton <drewish@katherinehouse.com>
  * @license http://opensource.org/licenses/lgpl-license.php
  *          GNU Lesser General Public License, Version 2.1

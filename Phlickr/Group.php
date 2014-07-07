@@ -1,12 +1,25 @@
 <?php
 
 /**
- * @version $Id$
+ * @version $Id: Group.php 510 2006-02-05 03:44:39Z drewish $
  * @author  Andrew Morton <drewish@katherinehouse.com>
  * @license http://opensource.org/licenses/lgpl-license.php
  *          GNU Lesser General Public License, Version 2.1
  * @package Phlickr
  */
+
+/**
+ * Phlickr_Api includes the core classes.
+ */
+require_once 'Phlickr/Api.php';
+/**
+ * This class extends Phlickr_ObjectBase.
+ */
+require_once 'Phlickr/Framework/ObjectBase.php';
+/**
+ * One or more methods returns Phlickr_PhotosetList objects.
+ */
+require_once 'Phlickr/PhotoList.php';
 
 /**
  * Phlickr_Group access to the photos in a group.

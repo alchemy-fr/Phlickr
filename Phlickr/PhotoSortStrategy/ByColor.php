@@ -1,12 +1,23 @@
 <?php
 
 /**
- * @version $Id$
+ * @version $Id: ByColor.php 516 2006-03-29 03:56:51Z drewish $
  * @author  Andrew Morton <drewish@katherinehouse.com>
  * @license http://opensource.org/licenses/lgpl-license.php
  *          GNU Lesser General Public License, Version 2.1
  * @package Phlickr
  */
+
+
+/**
+ * Phlickr_Api includes the core classes.
+ */
+require_once 'Phlickr/Api.php';
+/**
+ * This class implements IPhotoSortStrategy.
+ */
+require_once 'Phlickr/Framework/IPhotoSortStrategy.php';
+
 
 /**
  * An object to compare the color of two photos allowing them to be sorted.

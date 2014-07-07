@@ -1,13 +1,25 @@
 <?php
 
 /**
- * @version $Id$
+ * @version $Id: AuthedUser.php 500 2006-01-03 23:29:08Z drewish $
  * @author  Andrew Morton <drewish@katherinehouse.com>
  * @license http://opensource.org/licenses/lgpl-license.php
  *          GNU Lesser General Public License, Version 2.1
  * @package Phlickr
  */
 
+/**
+ * Phlickr_Api includes the core classes.
+ */
+require_once 'Phlickr/Api.php';
+/**
+ * This class extends Phlickr_User.
+ */
+require_once 'Phlickr/User.php';
+/**
+ * One or more methods returns Phlickr_AuthedPhotosetList objects.
+ */
+require_once 'Phlickr/AuthedPhotosetList.php';
 /**
  * This class extends Phlickr_User to perform actions on a logged in user.
  *

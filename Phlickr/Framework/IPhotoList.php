@@ -1,12 +1,21 @@
 <?php
 
 /**
- * @version $Id$
+ * @version $Id: IPhotoList.php 532 2007-02-08 06:55:29Z drewish $
  * @author  Andrew Morton <drewish@katherinehouse.com>
  * @license http://opensource.org/licenses/lgpl-license.php
  *          GNU Lesser General Public License, Version 2.1
  * @package Phlickr
  */
+
+/**
+ * This class implements IList.
+ */
+require_once 'Phlickr/Framework/IList.php';
+/**
+ * One or more methods returns Phlickr_Photo and Phlickr_AuthedPhoto objects.
+ */
+require_once 'Phlickr/AuthedPhoto.php';
 
 /**
  * Specifies the basic retreival functions that a PhotoList must support.

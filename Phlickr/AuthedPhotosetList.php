@@ -1,12 +1,25 @@
 <?php
 
 /**
- * @version $Id$
+ * @version $Id: AuthedPhotosetList.php 519 2006-04-24 06:10:30Z drewish $
  * @author  Andrew Morton <drewish@katherinehouse.com>
  * @license http://opensource.org/licenses/lgpl-license.php
  *          GNU Lesser General Public License, Version 2.1
  * @package Phlickr
  */
+
+/**
+ * Phlickr_Api includes the core classes.
+ */
+require_once 'Phlickr/Api.php';
+/**
+ * This class extends Phlickr_PhotosetList.
+ */
+require_once 'Phlickr/PhotosetList.php';
+/**
+ * One or more methods returns Phlickr_AuthedPhotoset objects.
+ */
+require_once 'Phlickr/AuthedPhotoset.php';
 
 /**
  * Phlickr_PhotosetList is a modifiable list of an authenticated user's

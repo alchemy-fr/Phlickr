@@ -1,12 +1,17 @@
 <?php
 
 /**
- * @version $Id$
+ * @version $Id: UploadBatchViewer.php 504 2006-01-28 03:44:34Z drewish $
  * @author  Andrew Morton <drewish@katherinehouse.com>
  * @license http://opensource.org/licenses/lgpl-license.php
  *          GNU Lesser General Public License, Version 2.1
  * @package Phlickr
  */
+
+/**
+ * This class uses Phlickr_Framework_IUploadBatch as a parameter.
+ */
+require_once 'Phlickr/Framework/IUploadBatch.php';
 
 /**
  * A command line viewer for upload batches. So you can see what's going to be uploaded before uploading.

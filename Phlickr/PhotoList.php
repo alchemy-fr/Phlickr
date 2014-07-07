@@ -1,12 +1,21 @@
 <?php
 
 /**
- * @version $Id$
+ * @version $Id: PhotoList.php 532 2007-02-08 06:55:29Z drewish $
  * @author  Andrew Morton <drewish@katherinehouse.com>
  * @license http://opensource.org/licenses/lgpl-license.php
  *          GNU Lesser General Public License, Version 2.1
  * @package Phlickr
  */
+
+/**
+ * Phlickr_Api includes the core classes.
+ */
+require_once 'Phlickr/Api.php';
+/**
+ * This class implements IPhotoList.
+ */
+require_once 'Phlickr/Framework/IPhotoList.php';
 
 /**
  * Phlickr_PhotoList represents paged list of photos.

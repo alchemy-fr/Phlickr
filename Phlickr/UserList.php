@@ -1,12 +1,25 @@
 <?php
 
 /**
- * @version $Id$
+ * @version $Id: UserList.php 500 2006-01-03 23:29:08Z drewish $
  * @author  Andrew Morton <drewish@katherinehouse.com>
  * @license http://opensource.org/licenses/lgpl-license.php
  *          GNU Lesser General Public License, Version 2.1
  * @package Phlickr
  */
+
+/**
+ * Phlickr_Api includes the core classes.
+ */
+require_once 'Phlickr/Api.php';
+/**
+ * This class extends Phlickr_ListBase.
+ */
+require_once 'Phlickr/Framework/ListBase.php';
+/**
+ * One or more methods returns Phlickr_User objects.
+ */
+require_once 'Phlickr/User.php';
 
 /**
  * Phlickr_UserList simply holds a list of users.

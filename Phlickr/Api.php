@@ -1,11 +1,28 @@
 <?php
 /**
- * @version $Id$
+ * @version $Id: Api.php 542 2009-05-15 00:33:49Z grahamsc $
  * @author  Andrew Morton <drewish@katherinehouse.com>
  * @license http://opensource.org/licenses/lgpl-license.php
  *          GNU Lesser General Public License, Version 2.1
  * @package Phlickr
  */
+
+/**
+ * Include Phlickr_Cache, a core class.
+ */
+require_once 'Phlickr/Cache.php';
+/**
+ * Include the Phlickr exceptions, core classes.
+ */
+require_once 'Phlickr/Exception.php';
+/**
+ * Include Phlickr_Request, a core class.
+ */
+require_once 'Phlickr/Request.php';
+/**
+ * Include Phlickr_CResponse, a core class.
+ */
+require_once 'Phlickr/Response.php';
 
 /**
  * Phlickr_Api acts as a connection to the Flickr API and provides several
@@ -229,7 +246,7 @@ class Phlickr_Api {
         // load the file
         $contents = file_get_contents($filename);
         // parse the key=value pairs into an associative array.
-        preg_match_all('/([-_a-zA-Z]+)=(.+)/', $contents, $matches, PREG_SET_ORDER);
+        preg_match_all('/([-_a-zA-Z]+)=(\w+)/', $contents, $matches, PREG_SET_ORDER);
         foreach($matches as $match) {
             $config[strtolower($match[1])] = $match[2];
         }
@@ -403,9 +420,8 @@ class Phlickr_Api {
     public function setAuthTokenFromFrob($frob) {
         $resp = $this->executeMethod('flickr.auth.getToken',
             array('frob' => (string) $frob));
-        
         $xml = $resp->getXml()->auth;
-        
+
         // assign the usefull stuff
         $this->_token = (string) $xml->token;
         $this->_userId = (string) $xml->user['nsid'];
@@ -443,12 +459,8 @@ class Phlickr_Api {
         if (is_null($this->_userId)) {
             try {
                 $response = $this->executeMethod('flickr.auth.checkToken');
-                if($response->isOk())
-                {
-                  $this->_userId = (string) $response->xml->auth->user['nsid'];
-                }
+                $this->_userId = (string) $response->xml->auth->user['nsid'];
             } catch (Phlickr_Exception $ex) {
-                 
                 // invalid login (or connection problem)
                 $this->_userId = null;
             }
@@ -505,7 +517,6 @@ class Phlickr_Api {
      */
     function requestFrob() {
         $resp = $this->executeMethod('flickr.auth.getFrob');
-        
         return (string) $resp->getXml()->frob;
     }
 
@@ -563,7 +574,7 @@ class Phlickr_Api {
      * @uses    createRequest() to build the Phlickr_Request object.
      * @uses    Phlickr_Request::execute() to execute the method.
      */
-    public function executeMethod($method, $params = array(), $allowCached = false) {
+    public function executeMethod($method, $params = array(), $allowCached = true) {
         return $this->createRequest($method, $params)->execute($allowCached);
     }
 }

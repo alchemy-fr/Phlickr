@@ -4,7 +4,7 @@
  * Phlickr makes use of PHP5 exceptions to simplify the detection of and
  * differentiation programming and connection errors.
  *
- * @version $Id$
+ * @version $Id: Exception.php 500 2006-01-03 23:29:08Z drewish $
  * @author  Andrew Morton <drewish@katherinehouse.com>
  * @license http://opensource.org/licenses/lgpl-license.php GNU Lesser General
  *          Public License, Version 2.1
@@ -78,12 +78,6 @@ class Phlickr_ConnectionException extends Phlickr_Exception {
  * @author  Andrew Morton <drewish@katherinehouse.com>
  */
 class Phlickr_MethodFailureException extends Phlickr_Exception {
-
-  public function __construct($errmsg =null, $errcode=null)
-  {
-    parent::__construct($errmsg);
-    
-  }
 }
 
 /**

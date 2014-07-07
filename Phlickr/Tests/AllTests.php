@@ -6,7 +6,7 @@
  * To run all test suite (assuming the Phlickr installation is in the include path)
  * run "phpunit Phlickr_Tests_AllTests"
  *
- * @version $Id$
+ * @version $Id: AllTests.php 537 2008-12-09 23:32:59Z edwardotis $
  * @copyright 2005
  */
 

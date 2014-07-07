@@ -3,7 +3,7 @@
 /**
 * Constants for use with the unit tests.
 *
-* @version $Id$
+* @version $Id: constants.inc 508 2006-02-02 09:00:31Z drewish $
 * @copyright 2005
 */
 

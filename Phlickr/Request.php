@@ -1,12 +1,17 @@
 <?php
 
 /**
- * @version $Id$
+ * @version $Id: Request.php 541 2009-05-15 00:28:54Z grahamsc $
  * @author  Andrew Morton <drewish@katherinehouse.com>
  * @license http://opensource.org/licenses/lgpl-license.php
  *          GNU Lesser General Public License, Version 2.1
  * @package Phlickr
  */
+
+/**
+ * Phlickr_Api includes the core classes.
+ */
+require_once 'Phlickr/Api.php';
 
 /**
  * The Phlickr_Request executes a Flickr API method and returns a
@@ -86,7 +91,7 @@ class Phlickr_Request {
      *
      * @var boolean
      */
-    private $_throwOnFail = false;
+    private $_throwOnFail = true;
 
     /**
      * Constructor.
@@ -309,13 +314,15 @@ class Phlickr_Request {
     public function execute($allowCached = false)
     {
         $url = $this->buildUrl();
-        $cache =& $this->getApi()->getCache();
+        $cache = $this->getApi()->getCache();
+//print "\nREQUEST: $url\n";
         if ($allowCached && $cache->has($url)) {
             $result = $cache->get($url);
         } else {
             $result = self::submitHttpPost($url);
             $cache->set($url, $result);
         }
+//print "RESULT: $result\n";
         return new Phlickr_Response($result, $this->_throwOnFail);
     }
 }

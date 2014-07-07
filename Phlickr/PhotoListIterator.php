@@ -1,12 +1,21 @@
 <?php
 
 /**
- * @version $Id$
+ * @version $Id: PhotoListIterator.php 522 2006-05-09 22:35:21Z drewish $
  * @author  Andrew Morton <drewish@katherinehouse.com>
  * @license http://opensource.org/licenses/lgpl-license.php
  *          GNU Lesser General Public License, Version 2.1
  * @package Phlickr
  */
+
+/**
+ * Phlickr_Api includes the core classes.
+ */
+require_once 'Phlickr/Api.php';
+/**
+ * This class uses the Phlickr_PhotoList object.
+ */
+require_once 'Phlickr/PhotoList.php';
 
 /**
  * Phlickr_PhotoListIterator is used to iterate through the pages of a

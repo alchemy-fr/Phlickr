@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @version $Id$
+ * @version $Id: ObjectBase.php 544 2009-05-15 01:02:21Z grahamsc $
  * @author  Andrew Morton <drewish@katherinehouse.com>
  * @license http://opensource.org/licenses/lgpl-license.php
  *          GNU Lesser General Public License, Version 2.1
@@ -18,7 +18,13 @@
  * @author      Andrew Morton <drewish@katherinehouse.com>
  * @package     Phlickr
  */
-abstract class Phlickr_Framework_ObjectBase {
+
+/**
+ * This class implements IObjectBase.
+ */
+require_once 'Phlickr/Framework/IObjectBase.php';
+
+abstract class Phlickr_Framework_ObjectBase implements Phlickr_Framework_IObjectBase {
     /**
      * Reference to the API.
      *
@@ -131,22 +137,6 @@ abstract class Phlickr_Framework_ObjectBase {
         }
         return $xml;
     }
-
-    /**
-     * Returns the name of this object's getInfo API method.
-     *
-     * @return  string
-     */
-    abstract static function getRequestMethodName();
-    /**
-     * Returns an array of parameters to be used when creating a
-     * Phlickr_Request to call this object's getInfo API method.
-     *
-     * @param   string $id The id value of this object.
-     * @return  array
-     * @see     getId()
-     */
-    abstract static function getRequestMethodParams($id);
     /**
      * Return the object's Id.
      *
@@ -220,5 +210,18 @@ abstract class Phlickr_Framework_ObjectBase {
     public function refresh() {
         // force a non-cached update
         $this->_cachedXml = $this->requestXml(false);
+    }
+    
+    /**
+     * Destruct the object and clean up the remaining information, allows PHP
+     * to GC properly.
+     *
+     * @return void
+     */
+    public function __destruct() { 
+	unset($this->_api);
+	unset($this->_respElement);
+	unset($this->_cachedXml);
+	unset($this->_request);
     }
 }

@@ -1,12 +1,17 @@
 <?php
 
 /**
- * @version $Id$
+ * @version $Id: AuthedGroup.php 506 2006-01-28 04:17:13Z drewish $
  * @author  Andrew Morton <drewish@katherinehouse.com>
  * @license http://opensource.org/licenses/lgpl-license.php
  *          GNU Lesser General Public License, Version 2.1
  * @package Phlickr
  */
+
+/**
+ * This class extends Group_Photo.
+ */
+require_once 'Phlickr/Group.php';
 
 /**
  * Phlickr_AuthedGroup allows a user to photos to groups they are a member of.

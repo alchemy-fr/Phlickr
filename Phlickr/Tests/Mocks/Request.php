@@ -3,7 +3,7 @@
 /**
  * Mock Request
  *
- * @version $Id$
+ * @version $Id: Request.php 199 2005-04-28 02:09:03Z drewish $
  * @author Andrew Morton <drewish@katherinehouse.com>
  * @license http://opensource.org/licenses/lgpl-license.php GNU Lesser General Public License, Version 2.1
  */

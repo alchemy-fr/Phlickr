@@ -1,12 +1,17 @@
 <?php
 
 /**
- * @version $Id$
+ * @version $Id: ListBase.php 499 2006-01-03 22:35:52Z drewish $
  * @author  Andrew Morton <drewish@katherinehouse.com>
  * @license http://opensource.org/licenses/lgpl-license.php
  *          GNU Lesser General Public License, Version 2.1
  * @package Phlickr
  */
+
+/**
+ * This class implements the IList interface.
+ */
+require_once 'Phlickr/Framework/IList.php';
 
 /**
  * A base class for the Phlickr lists that wrap XML returned by API calls.
