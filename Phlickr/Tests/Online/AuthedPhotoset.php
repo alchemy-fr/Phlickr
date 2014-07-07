@@ -7,10 +7,6 @@
  * @copyright 2005
  */
 
-require_once 'PHPUnit/Framework/TestCase.php';
-require_once 'Phlickr/Tests/constants.inc';
-require_once 'Phlickr/AuthedPhotoset.php';
-
 class Phlickr_Tests_Online_AuthedPhotoset extends PHPUnit_Framework_TestCase {
     var $api;
     var $photoset;

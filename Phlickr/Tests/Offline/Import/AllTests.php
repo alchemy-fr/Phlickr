@@ -16,14 +16,6 @@ if (!defined('PHPUnit_MAIN_METHOD')) {
     define('PHPUnit_MAIN_METHOD', 'Phlickr_Tests_Offline_Import_AllTests::main');
 }
 
-require_once 'PHPUnit/Framework/TestSuite.php';
-require_once 'PHPUnit/TextUI/TestRunner.php';
-require_once 'PHPUnit/Util/Filter.php';
-
-# LEAVE THIS COMMENTED OUT UNLESS YOU SETUP THE GALLERY INSTALLATION
-#require_once 'Phlickr/Tests/Offline/Import/Gallery.php';
-require_once 'Phlickr/Tests/Offline/Import/Makethumbs.php';
-
 class Phlickr_Tests_Offline_Import_AllTests {
     public static function main() {
         PHPUnit_TextUI_TestRunner::run(self::suite());

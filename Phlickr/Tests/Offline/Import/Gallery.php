@@ -7,11 +7,6 @@
  * @copyright 2005
  */
 
-require_once 'PHPUnit/Framework/TestCase.php';
-require_once 'Phlickr/Tests/constants.inc';
-
-require_once 'Phlickr/Import/Gallery.php';
-
 
 class Phlickr_Tests_Offline_Import_Gallery extends PHPUnit_Framework_TestCase {
     /**

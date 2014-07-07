@@ -7,48 +7,13 @@
  * include path) run:
  *      phpunit Phlickr_Tests_Offline_AllTests
  *
- * @version $Id: AllTests.php 537 2008-12-09 23:32:59Z edwardotis $
+ * @version $Id$
  * @copyright 2005
  */
 
 if (!defined('PHPUnit_MAIN_METHOD')) {
     define('PHPUnit_MAIN_METHOD', 'Phlickr_Tests_Offline_AllTests::main');
 }
-
-require_once 'PHPUnit/Framework/TestSuite.php';
-require_once 'PHPUnit/TextUI/TestRunner.php';
-require_once 'PHPUnit/Util/Filter.php';
-
-// sub-directories
-require_once 'Phlickr/Tests/Offline/Import/AllTests.php';
-require_once 'Phlickr/Tests/Offline/PhotoSortStrategy/AllTests.php';
-require_once 'Phlickr/Tests/Offline/TextUi/AllTests.php';
-
-// core
-require_once 'Phlickr/Tests/Offline/Api.php';
-require_once 'Phlickr/Tests/Offline/Cache.php';
-require_once 'Phlickr/Tests/Offline/Request.php';
-require_once 'Phlickr/Tests/Offline/Response.php';
-require_once 'Phlickr/Tests/Offline/Uploader.php';
-
-// wrappers
-require_once 'Phlickr/Tests/Offline/AuthedGroup.php';
-require_once 'Phlickr/Tests/Offline/AuthedPhoto.php';
-require_once 'Phlickr/Tests/Offline/AuthedPhotoset.php';
-require_once 'Phlickr/Tests/Offline/AuthedPhotosetList.php';
-require_once 'Phlickr/Tests/Offline/AuthedUser.php';
-require_once 'Phlickr/Tests/Offline/Group.php';
-require_once 'Phlickr/Tests/Offline/GroupList.php';
-//require_once 'Phlickr/Tests/Offline/Note.php';
-require_once 'Phlickr/Tests/Offline/Photo.php';
-require_once 'Phlickr/Tests/Offline/PhotoList.php';
-require_once 'Phlickr/Tests/Offline/PhotoListIterator.php';
-require_once 'Phlickr/Tests/Offline/Photoset.php';
-require_once 'Phlickr/Tests/Offline/PhotosetPhotoList.php';
-require_once 'Phlickr/Tests/Offline/PhotosetList.php';
-require_once 'Phlickr/Tests/Offline/PhotoSorter.php';
-require_once 'Phlickr/Tests/Offline/User.php';
-require_once 'Phlickr/Tests/Offline/UserList.php';
 
 class Phlickr_Tests_Offline_AllTests {
     public static function main() {

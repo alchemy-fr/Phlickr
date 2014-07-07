@@ -9,19 +9,6 @@
  */
 
 /**
- * Phlickr_Api includes the core classes.
- */
-require_once 'Phlickr/Api.php';
-/**
- * This class extends Phlickr_ListBase.
- */
-require_once 'Phlickr/Framework/ListBase.php';
-/**
- * One or more methods returns Phlickr_Group objects.
- */
-require_once 'Phlickr/Group.php';
-
-/**
  * Phlickr_GroupList
  *
  * Sample usage:

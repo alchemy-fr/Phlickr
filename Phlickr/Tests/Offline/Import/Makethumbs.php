@@ -7,11 +7,6 @@
  * @copyright 2005
  */
 
-require_once 'PHPUnit/Framework/TestCase.php';
-require_once 'Phlickr/Tests/constants.inc';
-
-require_once 'Phlickr/Import/Makethumbs.php';
-
 
 define('DESCRIPTIONS_TXT', <<<SAMPLE
 [short title]  (best to avoid HTML markup here, keep it short, <br>s are OK)

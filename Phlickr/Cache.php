@@ -9,11 +9,6 @@
  */
 
 /**
- * Phlickr_Api includes the core classes.
- */
-require_once 'Phlickr/Api.php';
-
-/**
  * The Phlickr_Cache stores responses to previous Flickr API calls.
  *
  * Sample usage:

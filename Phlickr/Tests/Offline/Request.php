@@ -7,10 +7,6 @@
  * @copyright 2005
  */
 
-require_once 'PHPUnit/Framework/TestCase.php';
-require_once 'Phlickr/Tests/constants.inc';
-require_once 'Phlickr/Api.php';
-
 class Phlickr_Tests_Offline_Request extends PHPUnit_Framework_TestCase {
     var $api;
     var $reqValid, $reqInvalid;
@@ -57,13 +53,13 @@ class Phlickr_Tests_Offline_Request extends PHPUnit_Framework_TestCase {
 
     function testBuildSignedUrl_NoParams() {
         $url = $this->reqValid->buildUrl();
-        $this->assertEquals('http://flickr.com/services/rest/?api_key=' . TESTING_API_KEY
+        $this->assertEquals('https://flickr.com/services/rest/?api_key=' . TESTING_API_KEY
             . '&method=flickr.test.echo&api_sig=32896da7a980b3456007f8646f3e0643', $url);
     }
     function testBuildSignedUrl_WithParams() {
         $this->reqValid->setParams(array('foo'=>'bar'));
         $url = $this->reqValid->buildUrl();
-        $this->assertEquals('http://flickr.com/services/rest/?api_key=' . TESTING_API_KEY .
+        $this->assertEquals('https://flickr.com/services/rest/?api_key=' . TESTING_API_KEY .
             '&foo=bar&method=flickr.test.echo&api_sig=d8a63992dffa6a192fc0bd263659d5e5', $url);
     }
     function testBuildSignedUrl_UseApiParams() {

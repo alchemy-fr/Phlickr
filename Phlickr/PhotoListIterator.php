@@ -9,15 +9,6 @@
  */
 
 /**
- * Phlickr_Api includes the core classes.
- */
-require_once 'Phlickr/Api.php';
-/**
- * This class uses the Phlickr_PhotoList object.
- */
-require_once 'Phlickr/PhotoList.php';
-
-/**
  * Phlickr_PhotoListIterator is used to iterate through the pages of a
  * Phlickr_PhotoList. It also can act as a Phlickr_IPhotoList effectively
  * combining a paged list into a single photo list.

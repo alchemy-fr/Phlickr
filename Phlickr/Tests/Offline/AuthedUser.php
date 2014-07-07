@@ -7,11 +7,6 @@
  * @copyright 2005
  */
 
-require_once 'PHPUnit/Framework/TestCase.php';
-require_once 'Phlickr/AuthedUser.php';
-require_once 'Phlickr/Tests/constants.inc';
-
-
 
 define('XML_FAVORITE_PHOTOLIST_PAGE1', <<<XML
 <photos page="1" pages="41" perpage="5" total="203">

@@ -7,10 +7,6 @@
  * @copyright 2005
  */
 
-require_once 'PHPUnit/Framework/TestCase.php';
-require_once 'Phlickr/Tests/constants.inc';
-require_once 'Phlickr/Response.php';
-
 class Phlickr_Tests_Offline_Response extends PHPUnit_Framework_TestCase {
     var $resp_ok, $resp_fail;
 

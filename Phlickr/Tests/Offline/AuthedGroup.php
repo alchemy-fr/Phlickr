@@ -3,13 +3,9 @@
 /**
  * Group Offline Tests
  *
- * @version $Id: AuthedGroup.php 537 2008-12-09 23:32:59Z edwardotis $
+ * @version $Id$
  * @copyright 2005
  */
-
-require_once 'PHPUnit/Framework/TestCase.php';
-require_once 'Phlickr/AuthedGroup.php';
-require_once 'Phlickr/Tests/constants.inc';
 
 class Phlickr_Tests_Offline_AuthedGroup extends PHPUnit_Framework_TestCase {
     var $api;

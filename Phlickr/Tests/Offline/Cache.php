@@ -7,15 +7,12 @@
  * @copyright 2005
  */
 
-require_once 'PHPUnit/Framework/TestCase.php';
-require_once 'Phlickr/Tests/constants.inc';
-require_once 'Phlickr/Request.php';
 
 class Phlickr_Tests_Offline_Cache extends PHPUnit_Framework_TestCase {
     var $cache;
 
-    const URL_A = 'http://flickr.com/services/rest/?api_key=11feb6fd0db850debccf2dc309dbc93a&email=testing%40drewish.com&password=testing&method=flickr.test.login';
-    const URL_B = 'http://flickr.com/services/rest/?api_key=11feb6fd0db850debccf2dc309dbc93a&email=BADUSER&password=BAD+PASSWORD&method=flickr.test.login';
+    const URL_A = 'https://flickr.com/services/rest/?api_key=11feb6fd0db850debccf2dc309dbc93a&email=testing%40drewish.com&password=testing&method=flickr.test.login';
+    const URL_B = 'https://flickr.com/services/rest/?api_key=11feb6fd0db850debccf2dc309dbc93a&email=BADUSER&password=BAD+PASSWORD&method=flickr.test.login';
 
     function setUp() {
         $this->cache = new Phlickr_Cache();

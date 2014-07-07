@@ -7,11 +7,6 @@
  * @copyright 2005
  */
 
-require_once 'PHPUnit/Framework/TestCase.php';
-require_once 'Phlickr/UserList.php';
-require_once 'Phlickr/Tests/Mocks/Request.php';
-require_once 'Phlickr/Tests/constants.inc';
-
 class Phlickr_Tests_Offline_UserList extends PHPUnit_Framework_TestCase {
     var $api;
     var $requestPublicContacts, $usersPublicContacts, $idsPublicContacts;

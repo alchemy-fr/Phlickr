@@ -8,23 +8,6 @@
  */
 
 /**
- * Include Phlickr_Cache, a core class.
- */
-require_once 'Phlickr/Cache.php';
-/**
- * Include the Phlickr exceptions, core classes.
- */
-require_once 'Phlickr/Exception.php';
-/**
- * Include Phlickr_Request, a core class.
- */
-require_once 'Phlickr/Request.php';
-/**
- * Include Phlickr_CResponse, a core class.
- */
-require_once 'Phlickr/Response.php';
-
-/**
  * Phlickr_Api acts as a connection to the Flickr API and provides several
  * shortcut methods for interacting with it.
  *
@@ -82,7 +65,7 @@ class Phlickr_Api {
      * @var string
      * @see setEndpointUrl()
      */
-    const REST_ENDPOINT_URL = 'http://flickr.com/services/rest/';
+    const REST_ENDPOINT_URL = 'https://flickr.com/services/rest/';
     /**
      * The name of the API key label in the settings files created by saveAs()
      * and read by createFrom().

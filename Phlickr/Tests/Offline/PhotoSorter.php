@@ -7,13 +7,6 @@
  * @copyright 2005
  */
 
-require_once 'PHPUnit/Framework/TestCase.php';
-require_once 'Phlickr/Tests/constants.inc';
-
-require_once 'Phlickr/PhotoSorter.php';
-require_once 'Phlickr/PhotosetPhotoList.php';
-require_once 'Phlickr/PhotoSortStrategy/ById.php';
-require_once 'Phlickr/PhotoSortStrategy/ByTitle.php';
 
 define('PHOTOSET_ID', 534039);
 define('PHOTOSET_PHOTOS', <<<XML

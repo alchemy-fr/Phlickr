@@ -7,11 +7,6 @@
  * @copyright 2005
  */
 
-require_once 'PHPUnit/Framework/TestCase.php';
-require_once 'Phlickr/Tests/constants.inc';
-
-require_once 'Phlickr/TextUi/UploadBatchViewer.php';
-
 
 class MockUploadBatch implements Phlickr_Framework_IUploadBatch {
     public $files, $titles, $descs, $tags, $dates, $setwanted, $settitle, $setdesc, $setprimary;

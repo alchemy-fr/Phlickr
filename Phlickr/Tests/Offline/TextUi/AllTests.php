@@ -16,12 +16,6 @@ if (!defined('PHPUnit_MAIN_METHOD')) {
     define('PHPUnit_MAIN_METHOD', 'Phlickr_Tests_Offline_TextUi_AllTests::main');
 }
 
-require_once 'PHPUnit/Framework/TestSuite.php';
-require_once 'PHPUnit/TextUI/TestRunner.php';
-require_once 'PHPUnit/Util/Filter.php';
-
-require_once 'Phlickr/Tests/Offline/TextUi/UploadBatchViewer.php';
-require_once 'Phlickr/Tests/Offline/TextUi/UploadListener.php';
 
 class Phlickr_Tests_Offline_TextUi_AllTests {
     public static function main() {

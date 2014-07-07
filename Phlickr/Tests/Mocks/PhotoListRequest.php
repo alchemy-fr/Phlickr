@@ -3,16 +3,11 @@
 /**
  * Mock Request
  *
- * @version $Id: PhotoListRequest.php 515 2006-02-06 00:29:20Z drewish $
+ * @version $Id$
  * @author Andrew Morton <drewish@katherinehouse.com>
  * @license http://opensource.org/licenses/lgpl-license.php GNU Lesser General Public License, Version 2.1
  */
 
-/**
- * Phlickr_Api includes the core classes
- */
-require_once 'Phlickr/Api.php';
-require_once 'Phlickr/Tests/constants.inc';
 
 class Phlickr_Tests_Mocks_PhotoListRequest extends Phlickr_Request {
     var $perPage, $totalPhotos, $totalPages;

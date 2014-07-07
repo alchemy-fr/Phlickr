@@ -3,13 +3,9 @@
 /**
  * Api Offline Tests
  *
- * @version $Id: Api.php 537 2008-12-09 23:32:59Z edwardotis $
+ * @version $Id$
  * @copyright 2005
  */
-
-require_once 'PHPUnit/Framework/TestCase.php';
-require_once 'Phlickr/Api.php';
-require_once 'Phlickr/Tests/constants.inc';
 
 class Phlickr_Tests_Offline_Api extends PHPUnit_Framework_TestCase {
     var $api;

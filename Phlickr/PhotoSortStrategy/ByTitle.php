@@ -10,16 +10,6 @@
 
 
 /**
- * Phlickr_Api includes the core classes.
- */
-require_once 'Phlickr/Api.php';
-/**
- * This class implements IPhotoSortStrategy.
- */
-require_once 'Phlickr/Framework/IPhotoSortStrategy.php';
-
-
-/**
  * An object to allow the sorting of photos by title.
  *
  * @author      Andrew Morton <drewish@katherinehouse.com>

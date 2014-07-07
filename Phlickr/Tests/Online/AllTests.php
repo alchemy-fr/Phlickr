@@ -15,26 +15,6 @@ if (!defined('PHPUnit_MAIN_METHOD')) {
     define('PHPUnit_MAIN_METHOD', 'Phlickr_Tests_Online_AllTests::main');
 }
 
-require_once 'PHPUnit/Framework/TestSuite.php';
-require_once 'PHPUnit/TextUI/TestRunner.php';
-require_once 'PHPUnit/Util/Filter.php';
-
-require_once 'Phlickr/Tests/Online/Api.php';
-require_once 'Phlickr/Tests/Online/Request.php';
-//require_once 'Phlickr/Tests/Online/Uploader.php';
-
-require_once 'Phlickr/Tests/Online/AuthedGroup.php';
-require_once 'Phlickr/Tests/Online/AuthedPhoto.php';
-require_once 'Phlickr/Tests/Online/AuthedPhotoset.php';
-require_once 'Phlickr/Tests/Online/AuthedPhotosetList.php';
-require_once 'Phlickr/Tests/Online/AuthedUser.php';
-require_once 'Phlickr/Tests/Online/Group.php';
-require_once 'Phlickr/Tests/Online/Photo.php';
-require_once 'Phlickr/Tests/Online/PhotoList.php';
-require_once 'Phlickr/Tests/Online/Photoset.php';
-require_once 'Phlickr/Tests/Online/PhotosetList.php';
-require_once 'Phlickr/Tests/Online/User.php';
-
 
 class Phlickr_Tests_Online_AllTests {
     public static function main() {

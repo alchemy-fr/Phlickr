@@ -10,16 +10,6 @@
 
 
 /**
- * Phlickr_Api includes the core classes.
- */
-require_once 'Phlickr/Api.php';
-/**
- * This class implements IPhotoSortStrategy.
- */
-require_once 'Phlickr/Framework/IPhotoSortStrategy.php';
-
-
-/**
  * An object to compare the color of two photos allowing them to be sorted.
  *
  * This class uses the GD library to resample the image to a single 1x1 pixel

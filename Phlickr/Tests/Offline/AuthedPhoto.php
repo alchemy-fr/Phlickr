@@ -3,13 +3,9 @@
 /**
 * AuthedPhoto Offline Tests
 *
-* @version $Id: AuthedPhoto.php 537 2008-12-09 23:32:59Z edwardotis $
+* @version $Id$
 * @copyright 2005
 */
-
-require_once 'PHPUnit/Framework/TestCase.php';
-require_once 'Phlickr/Tests/constants.inc';
-require_once 'Phlickr/AuthedPhoto.php';
 
 class Phlickr_Tests_Offline_AuthedPhoto extends PHPUnit_Framework_TestCase {
     var $api;

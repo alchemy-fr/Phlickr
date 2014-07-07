@@ -9,11 +9,6 @@
  */
 
 /**
- * This class extends Phlickr_Photoset.
- */
-require_once 'Phlickr/Photoset.php';
-
-/**
  * Phlickr_AuthedPhotoset represents a Flickr photoset.
  *
   * Sample usage:

@@ -7,11 +7,6 @@
  * @copyright 2005
  */
 
-require_once 'PHPUnit/Framework/TestCase.php';
-require_once 'Phlickr/Tests/constants.inc';
-
-require_once 'Phlickr/TextUi/UploadListener.php';
-
 // THIS TEST SUITE IS INCOMPLETE!
 
 class Phlickr_Tests_Offline_TextUi_UploadListener extends PHPUnit_Framework_TestCase {

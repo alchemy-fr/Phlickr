@@ -7,11 +7,6 @@
  * @copyright 2005
  */
 
-require_once 'PHPUnit/Framework/TestCase.php';
-require_once 'Phlickr/PhotoList.php';
-require_once 'Phlickr/Tests/Mocks/PhotoListRequest.php';
-
-
 class Phlickr_Tests_Offline_PhotoList extends PHPUnit_Framework_TestCase {
     var $api, $request, $pl;
     var $totalPhotos, $perPage;

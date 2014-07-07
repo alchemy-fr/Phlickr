@@ -7,10 +7,6 @@
  * @copyright 2005
  */
 
-require_once 'PHPUnit/Framework/TestCase.php';
-require_once 'Phlickr/Photo.php';
-require_once 'Phlickr/Tests/constants.inc';
-
 class Phlickr_Tests_Online_Photo extends PHPUnit_Framework_TestCase {
     var $api;
     var $photo;
