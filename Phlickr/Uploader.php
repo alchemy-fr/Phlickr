@@ -100,7 +100,7 @@ class Phlickr_Uploader {
      *
      * @var string
      */
-    const UPLOAD_URL = 'http://www.flickr.com/services/upload/';
+    const UPLOAD_URL = 'https://up.flickr.com/services/upload/';
     /**
      * The URL that the user should be redirected to for editing uploads.
      *
